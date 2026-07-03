@@ -3,6 +3,7 @@ import { useReveal } from '../hooks/useReveal'
 
 const RESUME_PATH = '/resume/Yared_Worku_Tegegn_CV.pdf'
 const RESUME_FILENAME = 'Yared_Worku_Tegegn_CV.pdf'
+const RESUME_UPDATED = 'July 2026' // update this manually whenever you replace the PDF
 
 export default function Resume() {
   const [ref, visible] = useReveal()
@@ -37,7 +38,7 @@ export default function Resume() {
               Yared Worku Tegegn — CV
             </h3>
             <p className="font-mono text-xs text-text-muted mt-1">
-              PDF · updated {new Date().toLocaleDateString('en-US', { month: 'long', year: 'numeric' })}
+              PDF · updated {RESUME_UPDATED}
             </p>
           </div>
         </div>

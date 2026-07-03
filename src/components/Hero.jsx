@@ -3,7 +3,6 @@ import myPhoto from '../assets/yared.jpg'
 
 const ROLE = 'Full-Stack Software Developer'
 
-// Keeps typing re-renders isolated so they don't force the photo to recalculate layout
 function TypewriterEffect() {
   const [typed, setTyped] = useState('')
   const [done, setDone] = useState(false)
@@ -50,12 +49,13 @@ export default function Hero() {
           <p className="font-mono text-lg md:text-xl text-copper mt-4 min-h-[1.75rem]">
             <TypewriterEffect />
           </p>
-          <p className="mt-6 max-w-xl text-text-muted leading-relaxed">
-            BSc in Information Technology from Hawassa University Institute of Technology.
-            I build across the stack — React and Angular on the front end, C# .NET, Node.js,
-            and PHP underneath, deployed and kept running on IIS.
-          </p>
-
+    <p className="mt-6 max-w-xl text-text-muted leading-relaxed">
+  BSc Degree in Information Technology from Hawassa University. I design and ship full systems end to end — from database
+  schema to deployment — with a focus on DotNetNuke (DNN) CMS, full-stack
+  .NET, and JSON-driven architectures. Recent work spans a hospital clinic
+  platform, a biometric attendance system, and a .NET Core containerized bookstore
+  app deployed on Render.
+   </p>
           <div className="mt-9 flex flex-wrap items-center gap-4">
             <a
               href="#projects"

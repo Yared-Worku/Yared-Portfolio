@@ -10,21 +10,37 @@ export default function Education() {
 
       <div
         ref={ref}
-        className={`border border-[color:var(--color-border)] bg-elevated rounded-sm p-6 flex flex-col sm:flex-row sm:items-center gap-4 justify-between ${
+        className={`border border-[color:var(--color-border)] bg-elevated rounded-sm p-6 flex flex-col sm:flex-row sm:items-start gap-4 justify-between ${
           visible ? 'reveal' : 'opacity-0'
         }`}
       >
         <div>
           <h3 className="font-display font-semibold text-text text-lg">
-            BSc in Information Technology
+            Bachelor of Science (BSc) Degree In Information Technology
           </h3>
-          <p className="text-text-muted text-sm mt-1">
-            Hawassa University Institute of Technology
+          <a
+            href="https://www.hu.edu.et"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-text-muted text-sm mt-1 inline-block hover:text-copper transition-colors"
+          >
+            Hawassa University 
+          </a>
+          <p className="text-text-muted text-xs mt-1">
+            Hawassa, Sidama, Ethiopia
           </p>
         </div>
-        <span className="font-mono text-sm text-copper shrink-0">
-          Expected June 2026
-        </span>
+        <div className="flex sm:flex-col items-start sm:items-end gap-3 sm:gap-1 shrink-0">
+          <span className="font-mono text-sm text-copper">
+            Feb 27, 2023 – June 25, 2026
+          </span>
+          <span className="font-mono text-xs text-text-muted">
+            CGPA: 3.45 (Distinction)
+          </span>
+            <span className="font-mono text-xs text-text-muted">
+            Exit Exam Result: 76 out of 100
+          </span>
+        </div>
       </div>
     </section>
   )

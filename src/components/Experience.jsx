@@ -5,13 +5,15 @@ const ITEMS = [
   {
     role: 'IT Intern',
     org: 'XOKA IT SOLUTION PLC',
-    period: 'Internship',
+    location: 'Addis Ababa, Ethiopia',
+    period: 'June 2025 – Sep 2025',
     points: [
-      'Integrated a biometric access control system using ZK iFace 302 hardware with a C# .NET background service.',
-      'Built and maintained front-end workflows in Angular alongside back-end services in ASP.NET Core.',
-      'Worked on DotNetNuke (DNN) CMS sites, including PHP components and Android-side integration.',
-      'Deployed and configured applications on IIS.',
+      'Developed an Attendance Management module using ZK iFace 302 fingerprint hardware for real-time employee identification.',
+      'Engineered a C# .NET background service to automatically fetch and sync biometric data at precise intervals into a SQL Server database.',
+      'Built the frontend in Angular, and managed complete server hosting and end-to-end deployment.',
+      "Leveraged DotNetNuke's modular architecture to deploy and manage web application modules, configure user permissions, and structure the portal — integrating the Angular frontend within the CMS environment.",
     ],
+    link: { label: 'xokait.com', url: 'http://xokait.com' },
   },
 ]
 
@@ -30,6 +32,17 @@ export default function Experience() {
               <p className="font-mono text-xs text-teal">{item.period}</p>
               <h3 className="font-display font-semibold text-text mt-1">{item.role}</h3>
               <p className="text-text-muted text-sm">{item.org}</p>
+              <p className="text-text-muted text-xs mt-1">{item.location}</p>
+              {item.link && (
+                <a
+                  href={item.link.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="font-mono text-xs text-copper hover:text-teal transition-colors mt-2 inline-block"
+                >
+                  {item.link.label} ↗
+                </a>
+              )}
             </div>
             <ul className="md:col-span-3 space-y-2">
               {item.points.map((pt, i) => (

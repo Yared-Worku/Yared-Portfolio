@@ -2,7 +2,10 @@ import { useState } from 'react'
 import SectionHeading from './SectionHeading'
 import { useReveal } from '../hooks/useReveal'
 
-const EMAIL = 'your.email@example.com'
+const EMAIL = 'yaredow8343@gmail.com'
+const PHONE = '+251 983438521'
+const GITHUB_URL = 'https://github.com/Yared-Worku'
+const LINKEDIN_URL = 'https://www.linkedin.com/in/yared-worku-0511273b3'
 
 export default function Contact() {
   const [ref, visible] = useReveal()
@@ -23,19 +26,34 @@ export default function Contact() {
 
       <div ref={ref} className={`grid md:grid-cols-5 gap-10 ${visible ? 'reveal' : 'opacity-0'}`}>
         <div className="md:col-span-2 space-y-5">
-          <p className="text-text-muted leading-relaxed">
-            I'm finishing my degree in June 2026 and looking for my next role.
-            If you have a project or an opening, I'd like to hear about it.
-          </p>
+         <p className="text-text-muted leading-relaxed">
+  I completed my BSc Degree in Information Technology at Hawassa University in
+  June 2026, and I'm actively looking for an open position. If you have
+  a role or a project that could use a full-stack developer, I'd like to
+  hear about it.
+     </p>
           <div className="space-y-2 font-mono text-sm">
             <a href={`mailto:${EMAIL}`} className="block text-teal hover:text-copper transition-colors">
               {EMAIL}
             </a>
-            <a href="#" className="block text-text-muted hover:text-copper transition-colors">
-              github.com/your-username
+            <a href={`tel:${PHONE.replace(/\s+/g, '')}`} className="block text-text-muted hover:text-copper transition-colors">
+              {PHONE}
             </a>
-            <a href="#" className="block text-text-muted hover:text-copper transition-colors">
-              linkedin.com/in/your-profile
+            <a
+              href={GITHUB_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="block text-text-muted hover:text-copper transition-colors"
+            >
+              github.com/Yared-Worku
+            </a>
+            <a
+              href={LINKEDIN_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="block text-text-muted hover:text-copper transition-colors"
+            >
+              linkedin.com/in/yared-worku
             </a>
           </div>
         </div>

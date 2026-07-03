@@ -40,11 +40,6 @@ export default function Skills() {
   return (
     <section id="skills" className="max-w-5xl mx-auto px-6 py-24">
       <SectionHeading index="02" name="skills" title="How the stack fits together" />
-      <p className="text-text-muted mb-14 max-w-xl">
-        Rather than a grid of logos, here's how the pieces actually stack in a
-        project — from what a user clicks, down to what keeps it running.
-      </p>
-
       <div ref={ref} className={`relative ${visible ? 'reveal' : 'opacity-0'}`}>
         {/* connector line */}
         <div className="absolute left-[15px] top-2 bottom-2 w-px bg-[color:var(--color-border)] overflow-hidden">

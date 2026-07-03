@@ -49,16 +49,16 @@ export default function About() {
                 <dd className="text-text text-right">BSc, Information Technology</dd>
               </div>
               <div className="flex justify-between gap-4">
-                <dt className="text-text-muted">cgpa</dt>
+                <dt className="text-text-muted">CGPA</dt>
                 <dd className="text-text text-right">3.45</dd>
               </div>
               <div className="flex justify-between gap-4">
                 <dt className="text-text-muted">Exit Exam Result</dt>
-                <dd className="text-text text-right">76</dd>
+                <dd className="text-text text-right">76 out of 100</dd>
               </div>
               <div className="flex justify-between gap-4">
-                <dt className="text-text-muted">graduated</dt>
-                <dd className="text-text text-right">June 27, 2026</dd>
+                <dt className="text-text-muted">graduating</dt>
+                <dd className="text-text text-right">June 25, 2026</dd>
               </div>
               <div className="flex justify-between gap-4">
                 <dt className="text-text-muted">focus</dt>

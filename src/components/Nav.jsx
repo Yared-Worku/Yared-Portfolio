@@ -6,9 +6,31 @@ const LINKS = [
   { id: 'projects', label: 'projects' },
   { id: 'experience', label: 'experience' },
   { id: 'education', label: 'education' },
-    { id: 'resume', label: 'resume', cta: true },
+  { id: 'resume', label: 'resume', cta: true },
   { id: 'contact', label: 'contact' },
 ]
+
+function MenuToggleIcon({ open }) {
+  return (
+    <div className="w-5 h-4 relative flex flex-col justify-between">
+      <span
+        className={`block h-[1.5px] w-full bg-current transition-transform duration-300 origin-center ${
+          open ? 'rotate-45 translate-y-[7px]' : ''
+        }`}
+      />
+      <span
+        className={`block h-[1.5px] w-full bg-current transition-opacity duration-300 ${
+          open ? 'opacity-0' : 'opacity-100'
+        }`}
+      />
+      <span
+        className={`block h-[1.5px] w-full bg-current transition-transform duration-300 origin-center ${
+          open ? '-rotate-45 -translate-y-[7px]' : ''
+        }`}
+      />
+    </div>
+  )
+}
 
 export default function Nav() {
   const [open, setOpen] = useState(false)
@@ -39,64 +61,65 @@ export default function Nav() {
           yared@portfolio<span className="text-text-muted">:~$</span>
         </button>
 
-       <ul className="hidden md:flex items-center gap-7 font-mono text-sm text-text-muted">
-  {LINKS.map((l) =>
-    l.cta ? (
-      <li key={l.id}>
-        <button
-          onClick={() => go(l.id)}
-          className="font-mono text-xs px-3 py-1.5 border border-copper text-copper rounded-sm hover:bg-copper hover:text-ink transition-colors"
-        >
-          {l.label}
-        </button>
-      </li>
-    ) : (
-      <li key={l.id}>
-        <button
-          onClick={() => go(l.id)}
-          className="hover:text-copper transition-colors"
-        >
-          {l.label}
-        </button>
-      </li>
-    )
-  )}
-</ul>
+        <ul className="hidden md:flex items-center gap-7 font-mono text-sm text-text-muted">
+          {LINKS.map((l) =>
+            l.cta ? (
+              <li key={l.id}>
+                <button
+                  onClick={() => go(l.id)}
+                  className="font-mono text-xs px-3 py-1.5 border border-copper text-copper rounded-sm hover:bg-copper hover:text-ink transition-colors"
+                >
+                  {l.label}
+                </button>
+              </li>
+            ) : (
+              <li key={l.id}>
+                <button
+                  onClick={() => go(l.id)}
+                  className="hover:text-copper transition-colors"
+                >
+                  {l.label}
+                </button>
+              </li>
+            )
+          )}
+        </ul>
 
         <button
-          className="md:hidden font-mono text-text-muted"
+          className="md:hidden text-text-muted hover:text-copper transition-colors p-1"
           onClick={() => setOpen((v) => !v)}
           aria-label="Toggle menu"
+          aria-expanded={open}
         >
-          {open ? '[x]' : '[menu]'}
+          <MenuToggleIcon open={open} />
         </button>
       </nav>
 
       {open && (
-  <ul className="md:hidden flex flex-col gap-1 px-6 pb-4 font-mono text-sm text-text-muted bg-ink/95 border-b border-[color:var(--color-border)]">
-    {LINKS.map((l) =>
-      l.cta ? (
-        <li key={l.id} className="py-2">
-          <button
-            onClick={() => go(l.id)}
-            className="font-mono text-xs px-3 py-1.5 border border-copper text-copper rounded-sm hover:bg-copper hover:text-ink transition-colors"
-          >
-            {l.label}
-          </button>
-        </li>
-      ) : (
-        <li key={l.id}>
-          <button
-            onClick={() => go(l.id)}
-            className="py-2 w-full text-left hover:text-copper transition-colors"
-          >
-            {l.label}
-          </button>
-        </li>
-      )
-    )}
-  </ul>
-)}
+        <ul className="md:hidden flex flex-col gap-1 px-6 pb-4 font-mono text-sm text-text-muted bg-ink/95 border-b border-[color:var(--color-border)]">
+          {LINKS.map((l) =>
+            l.cta ? (
+              <li key={l.id} className="py-2">
+                <button
+                  onClick={() => go(l.id)}
+                  className="font-mono text-xs px-3 py-1.5 border border-copper text-copper rounded-sm hover:bg-copper hover:text-ink transition-colors"
+                >
+                  {l.label}
+                </button>
+              </li>
+            ) : (
+              <li key={l.id}>
+                <button
+                  onClick={() => go(l.id)}
+                  className="py-2 w-full text-left hover:text-copper transition-colors"
+                >
+                  {l.label}
+                </button>
+              </li>
+            )
+          )}
+        </ul>
+      )}
     </header>
   )
 }
