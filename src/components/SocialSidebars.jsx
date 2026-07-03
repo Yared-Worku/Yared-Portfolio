@@ -23,7 +23,7 @@ export default function SocialSidebars() {
   return (
     <>
       {/* left: social icons + vertical line, fixed to viewport */}
-      <div className="flex flex-col items-center gap-4 sm:gap-6 fixed left-3 sm:left-5 lg:left-8 bottom-0 z-40">
+      <div className="flex flex-col items-center gap-4 sm:gap-6 fixed left-3 sm:left-5 lg:left-8 top-1/2 -translate-y-1/10 z-40">
         <a
           href={GITHUB_URL}
           target="_blank"
@@ -46,7 +46,7 @@ export default function SocialSidebars() {
       </div>
 
       {/* right: rotated email + vertical line, fixed to viewport */}
-      <div className="flex flex-col items-center gap-4 sm:gap-6 fixed right-3 sm:right-5 lg:right-8 bottom-0 z-40">
+      <div className="flex flex-col items-center gap-4 sm:gap-6 fixed right-3 sm:right-5 lg:right-8 top-1/2 -translate-y-1/4 z-40">
         <a
           href={`mailto:${EMAIL}`}
           className="font-mono text-[10px] sm:text-xs text-text-muted hover:text-copper transition-colors tracking-wider"
