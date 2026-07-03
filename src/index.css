@@ -73,3 +73,8 @@ body {
 ::-webkit-scrollbar { width: 10px; }
 ::-webkit-scrollbar-track { background: var(--color-ink); }
 ::-webkit-scrollbar-thumb { background: var(--color-elevated-2); border-radius: 6px; }
+
+@keyframes signal {
+  0% { transform: translateY(-64px); }
+  100% { transform: translateY(560px); }
+}

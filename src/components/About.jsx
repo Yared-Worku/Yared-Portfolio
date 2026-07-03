@@ -13,22 +13,26 @@ export default function About() {
       >
         <div className="md:col-span-3 space-y-4 text-text-muted leading-relaxed">
           <p>
-            I'm an Information Technology graduate from Hawassa University Institute of
-            Technology, finishing my degree in June 2026. My interest sits at the
-            intersection of building usable interfaces and the backend systems that
-            keep them reliable.
+            I'm an Information Technology graduate (BSc) from <b>Hawassa University</b>,
+             with a focus on enterprise-level modular
+            systems. I work mainly in DotNetNuke (DNN) CMS and full-stack .NET
+            development, alongside hands-on experience with Node.js (Express)
+            and JSON-driven web architectures — including online marketing
+            sites and school-based online testing platforms.
           </p>
           <p>
-            During my internship at XOKA IT SOLUTION PLC, I worked across a genuinely
-            wide stack — from wiring up a biometric access system on ZK iFace 302
-            hardware, to writing C# background services, to shipping Angular front
-            ends and maintaining sites on DotNetNuke CMS. That breadth taught me to
-            move comfortably between layers instead of specializing too early.
+            On the data side, I design and manage enterprise-level databases:
+            schema design, normalization, stored procedures, SQL Server Agent
+            jobs, and views. During my internship at XOKA IT SOLUTION PLC, I
+            bridged hardware and software directly — building a biometric
+            attendance system on ZK iFace 302 fingerprint hardware, with a C#
+            .NET background service syncing data into SQL Server, and an
+            Angular front end deployed through DNN's modular architecture.
           </p>
           <p>
-            Outside of coursework, I build my own projects end to end — from schema
-            design to deployment — because I'd rather learn a system by shipping it
-            than by reading about it.
+            I like architecting scalable solutions end to end — from clinic
+            management systems to automated attendance tracking — and
+            deploying them myself, typically hosted on IIS.
           </p>
         </div>
 
@@ -38,15 +42,23 @@ export default function About() {
             <dl className="space-y-3">
               <div className="flex justify-between gap-4">
                 <dt className="text-text-muted">location</dt>
-                <dd className="text-text text-right">Ethiopia</dd>
+                <dd className="text-text text-right">Addis Ababa, Ethiopia</dd>
               </div>
               <div className="flex justify-between gap-4">
                 <dt className="text-text-muted">degree</dt>
                 <dd className="text-text text-right">BSc, Information Technology</dd>
               </div>
               <div className="flex justify-between gap-4">
-                <dt className="text-text-muted">graduating</dt>
-                <dd className="text-text text-right">June 2026</dd>
+                <dt className="text-text-muted">cgpa</dt>
+                <dd className="text-text text-right">3.45</dd>
+              </div>
+              <div className="flex justify-between gap-4">
+                <dt className="text-text-muted">Exit Exam Result</dt>
+                <dd className="text-text text-right">76</dd>
+              </div>
+              <div className="flex justify-between gap-4">
+                <dt className="text-text-muted">graduated</dt>
+                <dd className="text-text text-right">June 27, 2026</dd>
               </div>
               <div className="flex justify-between gap-4">
                 <dt className="text-text-muted">focus</dt>
