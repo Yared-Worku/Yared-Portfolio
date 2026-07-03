@@ -1,6 +1,5 @@
 import { useEffect, useState } from 'react'
 import myPhoto from '../assets/yared.jpg'
-
 const ROLE = 'Full-Stack Software Developer'
 
 function TypewriterEffect() {
