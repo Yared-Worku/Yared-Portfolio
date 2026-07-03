@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react'
-import myPhoto from '../assets/yared.jpg'
+// import myPhoto from '../assets/yared.jpg'
+import myPhoto from '../assets/yared.JPG'
 const ROLE = 'Full-Stack Software Developer'
 
 function TypewriterEffect() {
