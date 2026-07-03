@@ -6,7 +6,7 @@ const LINKS = [
   { id: 'projects', label: 'projects' },
   { id: 'experience', label: 'experience' },
   { id: 'education', label: 'education' },
-  { id: 'resume', label: 'resume', cta: true },
+  { id: 'resume', label: 'resume/cv', cta: true },
   { id: 'contact', label: 'contact' },
 ]
 
