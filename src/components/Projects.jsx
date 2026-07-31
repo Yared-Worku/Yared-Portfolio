@@ -33,12 +33,12 @@ import s4 from '../assets/projects/shoping/s4.png'
 import shipdetail from '../assets/projects/shoping/shipdetail.png'
 
  //online exam
- import start from '../assets/projects/shoping/start.png'
+ import start from '../assets/projects/exam/start.png'
  import completed from '../assets/projects/exam/completed.png'
- import s1 from '../assets/projects/shoping/s1.png'
- import s2 from '../assets/projects/shoping/s2.png'
- import s3 from '../assets/projects/shoping/s3.png'
- import summary from '../assets/projects/shoping/summary.png'
+ import s1e from '../assets/projects/exam/s1e.png'
+ import s2e from '../assets/projects/exam/s2e.png'
+ import s3e from '../assets/projects/exam/s3e.png'
+ import summary from '../assets/projects/exam/summary.png'
 
 
 const PROJECTS = [
@@ -95,7 +95,7 @@ const PROJECTS = [
       'A lightweight, responsive online testing platform for universities and high schools. A JSON-driven architecture streams real-time exam data, question banks, and grading results, with a backend built to natively support multiple exam formats and institutional user levels.',
     stack: ['React', 'ASP.NET Core Web API', 'JSON'],
     links: { code: '#', demo: 'https://online-examination-bxjv.vercel.app' },
-    images: [start, s1, s2, s3, summary, completed],
+    images: [start, s1e, s2e, s3e, summary, completed],
   },
 ]
 
