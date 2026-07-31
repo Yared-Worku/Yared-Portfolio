@@ -1,6 +1,7 @@
 import { useState, useEffect, useRef } from 'react'
 import SectionHeading from './SectionHeading'
 import { useReveal } from '../hooks/useReveal'
+import { createPortal } from 'react-dom'
 
 // HUCMS
 import hucmsHome from '../assets/projects/hucms_home.png'
@@ -101,6 +102,7 @@ const PROJECTS = [
 
 function ProjectSlider({ images, name }) {
   const [index, setIndex] = useState(0)
+  const [zoomed, setZoomed] = useState(false)
   const timerRef = useRef(null)
 
   useEffect(() => {
@@ -129,6 +131,22 @@ function ProjectSlider({ images, name }) {
     setIndex((i) => (i + 1) % images.length)
   }
 
+  // Close on Escape while zoomed
+  useEffect(() => {
+    if (!zoomed) return
+    const onKey = (e) => {
+      if (e.key === 'Escape') setZoomed(false)
+      if (e.key === 'ArrowLeft') setIndex((i) => (i - 1 + images.length) % images.length)
+      if (e.key === 'ArrowRight') setIndex((i) => (i + 1) % images.length)
+    }
+    window.addEventListener('keydown', onKey)
+    document.body.style.overflow = 'hidden'
+    return () => {
+      window.removeEventListener('keydown', onKey)
+      document.body.style.overflow = ''
+    }
+  }, [zoomed, images.length])
+
   if (!images || images.length === 0) {
     return (
       <div className="w-full aspect-[4/3] flex items-center justify-center border border-dashed border-[color:var(--color-border)] rounded-sm bg-ink/40">
@@ -137,58 +155,111 @@ function ProjectSlider({ images, name }) {
     )
   }
 
-  return (
-    <div
-      className="relative w-full aspect-[4/3] rounded-sm overflow-hidden border border-[color:var(--color-border)] bg-ink group/slider"
-      onMouseEnter={pause}
-      onMouseLeave={resume}
-    >
-      {images.map((src, i) => (
-        <img
-          key={src}
-          src={src}
-          alt={`${name} screenshot ${i + 1}`}
-          className={`absolute inset-0 w-full h-full object-contain transition-opacity duration-500 ${
-            i === index ? 'opacity-100' : 'opacity-0'
-          }`}
-        />
-      ))}
+return (
+    <>
+      <div
+        className="relative w-full aspect-[4/3] rounded-sm overflow-hidden border border-[color:var(--color-border)] bg-ink group/slider cursor-zoom-in"
+        onMouseEnter={pause}
+        onMouseLeave={resume}
+        onClick={() => setZoomed(true)}
+      >
+        {images.map((src, i) => (
+          <img
+            key={src}
+            src={src}
+            alt={`${name} screenshot ${i + 1}`}
+            className={`absolute inset-0 w-full h-full object-contain transition-opacity duration-500 ${
+              i === index ? 'opacity-100' : 'opacity-0'
+            }`}
+          />
+        ))}
 
-      {images.length > 1 && (
-        <>
+        {images.length > 1 && (
+          <>
+            <button
+              onClick={prev}
+              aria-label="Previous screenshot"
+              className="absolute left-2 top-1/2 -translate-y-1/2 w-7 h-7 rounded-full bg-ink/80 border border-[color:var(--color-border)] text-text opacity-0 group-hover/slider:opacity-100 transition-opacity flex items-center justify-center font-mono text-xs"
+            >
+              ‹
+            </button>
+            <button
+              onClick={next}
+              aria-label="Next screenshot"
+              className="absolute right-2 top-1/2 -translate-y-1/2 w-7 h-7 rounded-full bg-ink/80 border border-[color:var(--color-border)] text-text opacity-0 group-hover/slider:opacity-100 transition-opacity flex items-center justify-center font-mono text-xs"
+            >
+              ›
+            </button>
+
+            <div className="absolute bottom-2 left-1/2 -translate-x-1/2 flex gap-1.5">
+              {images.map((_, i) => (
+                <button
+                  key={i}
+                  onClick={(e) => {
+                    e.stopPropagation()
+                    setIndex(i)
+                  }}
+                  aria-label={`Go to screenshot ${i + 1}`}
+                  className={`w-1.5 h-1.5 rounded-full transition-colors ${
+                    i === index ? 'bg-copper' : 'bg-text-muted/50'
+                  }`}
+                />
+              ))}
+            </div>
+          </>
+        )}
+
+        {/* subtle zoom affordance */}
+        <div className="absolute top-2 right-2 w-6 h-6 rounded-full bg-ink/80 border border-[color:var(--color-border)] text-text-muted opacity-0 group-hover/slider:opacity-100 transition-opacity flex items-center justify-center font-mono text-[10px]">
+          ⤢
+        </div>
+      </div>
+
+      {zoomed && createPortal(
+        <div
+          className="fixed inset-0 z-[9999] bg-ink/95 flex items-center justify-center p-6 cursor-zoom-out"
+          onClick={() => setZoomed(false)}
+        >
           <button
-            onClick={prev}
-            aria-label="Previous screenshot"
-            className="absolute left-2 top-1/2 -translate-y-1/2 w-7 h-7 rounded-full bg-ink/80 border border-[color:var(--color-border)] text-text opacity-0 group-hover/slider:opacity-100 transition-opacity flex items-center justify-center font-mono text-xs"
+            onClick={() => setZoomed(false)}
+            aria-label="Close"
+            className="absolute top-5 right-5 w-9 h-9 rounded-full bg-elevated border border-[color:var(--color-border)] text-text hover:text-copper transition-colors flex items-center justify-center font-mono text-sm"
           >
-            ‹
-          </button>
-          <button
-            onClick={next}
-            aria-label="Next screenshot"
-            className="absolute right-2 top-1/2 -translate-y-1/2 w-7 h-7 rounded-full bg-ink/80 border border-[color:var(--color-border)] text-text opacity-0 group-hover/slider:opacity-100 transition-opacity flex items-center justify-center font-mono text-xs"
-          >
-            ›
+            ✕
           </button>
 
-          <div className="absolute bottom-2 left-1/2 -translate-x-1/2 flex gap-1.5">
-            {images.map((_, i) => (
+          <img
+            src={images[index]}
+            alt={`${name} screenshot ${index + 1} enlarged`}
+            className="max-w-full max-h-full object-contain rounded-sm"
+            onClick={(e) => e.stopPropagation()}
+          />
+
+          {images.length > 1 && (
+            <>
               <button
-                key={i}
-                onClick={(e) => {
-                  e.stopPropagation()
-                  setIndex(i)
-                }}
-                aria-label={`Go to screenshot ${i + 1}`}
-                className={`w-1.5 h-1.5 rounded-full transition-colors ${
-                  i === index ? 'bg-copper' : 'bg-text-muted/50'
-                }`}
-              />
-            ))}
-          </div>
-        </>
+                onClick={prev}
+                aria-label="Previous screenshot"
+                className="absolute left-5 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-elevated border border-[color:var(--color-border)] text-text hover:text-copper transition-colors flex items-center justify-center font-mono text-lg"
+              >
+                ‹
+              </button>
+              <button
+                onClick={next}
+                aria-label="Next screenshot"
+                className="absolute right-5 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-elevated border border-[color:var(--color-border)] text-text hover:text-copper transition-colors flex items-center justify-center font-mono text-lg"
+              >
+                ›
+              </button>
+              <div className="absolute bottom-6 left-1/2 -translate-x-1/2 font-mono text-xs text-text-muted">
+                {index + 1} / {images.length}
+              </div>
+            </>
+          )}
+        </div>,
+        document.body
       )}
-    </div>
+    </>
   )
 }
 
