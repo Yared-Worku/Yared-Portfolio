@@ -33,7 +33,7 @@ import s4 from '../assets/projects/shoping/s4.png'
 import shipdetail from '../assets/projects/shoping/shipdetail.png'
 
  //online exam
- import completed from '../assets/projects/exam/completed'
+ import completed from '../assets/projects/exam/completed.png'
  import start from '../assets/projects/shoping/start.png'
  import s1 from '../assets/projects/shoping/s1.png'
  import s2 from '../assets/projects/shoping/s2.png'
@@ -85,7 +85,7 @@ const PROJECTS = [
     description:
       'A decoupled product showcase with a React frontend and ASP.NET Core Web API backend, using a flexible JSON-driven data layer for dynamic catalog rendering and multi-category filtering without traditional database overhead.',
     stack: ['React', 'ASP.NET Core Web API', 'JSON'],
-    links: { code: '#', demo: '#' },
+    links: { code: '#', demo: 'https://online-store-eight-zeta.vercel.app' },
     images: [s1, s2, custdetail, shipdetail, payment, s3, s4],
   },
   {
@@ -94,7 +94,7 @@ const PROJECTS = [
     description:
       'A lightweight, responsive online testing platform for universities and high schools. A JSON-driven architecture streams real-time exam data, question banks, and grading results, with a backend built to natively support multiple exam formats and institutional user levels.',
     stack: ['React', 'ASP.NET Core Web API', 'JSON'],
-    links: { code: '#', demo: '#' },
+    links: { code: '#', demo: 'https://online-examination-bxjv.vercel.app' },
     images: [start, s1, s2, s3, summary, completed],
   },
 ]
