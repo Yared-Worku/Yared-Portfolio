@@ -33,8 +33,8 @@ import s4 from '../assets/projects/shoping/s4.png'
 import shipdetail from '../assets/projects/shoping/shipdetail.png'
 
  //online exam
- import completed from '../assets/projects/exam/completed.png'
  import start from '../assets/projects/shoping/start.png'
+ import completed from '../assets/projects/exam/completed.png'
  import s1 from '../assets/projects/shoping/s1.png'
  import s2 from '../assets/projects/shoping/s2.png'
  import s3 from '../assets/projects/shoping/s3.png'
