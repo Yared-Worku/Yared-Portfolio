@@ -22,6 +22,17 @@ import bpmForm from '../assets/projects/bpm_form.png'
 import bpmOrganization from '../assets/projects/bpm_organization.png'
 import bpmDepartment from '../assets/projects/bpm_department.png'
 
+//online shope
+
+import custdetail from '../assets/projects/shoping/custdetail.png'
+import last from '../assets/projects/shoping/last.png'
+import payment from '../assets/projects/shoping/payment.png'
+import s1 from '../assets/projects/shoping/s1.png'
+import s2 from '../assets/projects/shoping/s2.png'
+import s3 from '../assets/projects/shoping/s3.png'
+import s4 from '../assets/projects/shoping/s4.png'
+import shipdetail from '../assets/projects/shoping/shipdetail.png'
+
 const PROJECTS = [
   {
     name: 'HUCMS — Clinic Management System',
