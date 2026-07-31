@@ -1,8 +1,8 @@
 import SectionHeading from './SectionHeading'
 import { useReveal } from '../hooks/useReveal'
 
-const RESUME_PATH = '/resume/Yared_Worku_Tegegn_CV.pdf'
-const RESUME_FILENAME = 'Yared_Worku_Tegegn_CV.pdf'
+const RESUME_PATH = '/resume/Yared_Worku_CV.pdf'
+const RESUME_FILENAME = 'Yared_Worku_CV.pdf'
 const RESUME_UPDATED = 'July 2026' // update this manually whenever you replace the PDF
 
 export default function Resume() {
