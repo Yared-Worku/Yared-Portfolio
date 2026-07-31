@@ -67,7 +67,7 @@ const PROJECTS = [
       'A decoupled product showcase with a React frontend and ASP.NET Core Web API backend, using a flexible JSON-driven data layer for dynamic catalog rendering and multi-category filtering without traditional database overhead.',
     stack: ['React', 'ASP.NET Core Web API', 'JSON'],
     links: { code: '#', demo: '#' },
-    images: [],
+    images: [s1, s2, custdetail, shipdetail, payment, s3, s4],
   },
   {
     name: 'Online Examination Platform',
@@ -76,7 +76,7 @@ const PROJECTS = [
       'A lightweight, responsive online testing platform for universities and high schools. A JSON-driven architecture streams real-time exam data, question banks, and grading results, with a backend built to natively support multiple exam formats and institutional user levels.',
     stack: ['React', 'ASP.NET Core Web API', 'JSON'],
     links: { code: '#', demo: '#' },
-    images: [],
+    images: [start, s1, s2, s3, summary, completed],
   },
 ]
 
