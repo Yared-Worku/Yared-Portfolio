@@ -80,6 +80,7 @@ const PROJECTS = [
     links: { code: '#', demo: '#' },
     images: [],
   },
+  
   {
     name: 'E-Commerce Product Showcase',
     role: 'Full-Stack Developer',
