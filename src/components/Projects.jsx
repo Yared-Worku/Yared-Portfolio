@@ -58,10 +58,10 @@ import summary from '../assets/projects/exam/summary.png'
 const PROJECTS = [
   {
     name: 'ERPNext Customization & Module Development',
-    role: 'Frappe / ERPNext Backend Developer',
+    role: 'Frappe / ERPNext Developer',
     description:
-      'Engineered custom business logic and extended ERPNext core functionality using the Frappe framework. Built custom DocTypes, Web Forms, and Workspaces alongside whitelisted Python REST APIs (.py), client scripts (.js), and database schema definitions (.json) to automate workflows.',
-    stack: ['Frappe Framework', 'Python', 'JavaScript', 'ERPNext', 'JSON', 'MariaDB'],
+      'Worked across the full Frappe/ERPNext stack — from framework internals to production data — to design and ship custom business modules on top of ERPNext and HRMS. Built new DocTypes from scratch (fields, permissions, naming series, and list/report views) and extended existing ones to fit organization-specific workflows. Developed and published custom Web Forms and Web Pages for non-technical end users, and worked directly within ERPNext\'s native Workspace and module structure to integrate new features without breaking existing flows. On the backend, wrote whitelisted Python REST APIs (.py) for custom business logic, client-side scripts (.js) for real-time form behavior and validation, and JSON schema definitions for DocType and workspace configuration. Also worked hands-on with the underlying MariaDB database — running direct queries to verify data integrity, debug sync issues, and understand how Frappe\'s ORM maps to actual table structure — giving a full-stack grasp of the framework from UI down to raw storage. These same REST APIs went on to power an independent mobile app for employee attendance and leave requests, closing the loop from backend design to a real-world client integration.',
+    stack: ['Frappe Framework', 'ERPNext', 'HRMS', 'Python', 'JavaScript', 'DocTypes', 'Web Forms', 'JSON', 'MariaDB'],
     links: { code: '#', demo: '#' },
     images: [erp1, erp2, erp3, erp4, erp5],
   },
