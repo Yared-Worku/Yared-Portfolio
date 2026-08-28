@@ -15,6 +15,10 @@ import erp6 from '../assets/projects/ERPNext/erp6.jpg'
 import erp7 from '../assets/projects/ERPNext/erp7.jpg'
 import erp8 from '../assets/projects/ERPNext/erp8.jpg'
 import erp9 from '../assets/projects/ERPNext/erp9.jpg'
+import erp10 from '../assets/projects/ERPNext/erp10.jpg'
+import erp11 from '../assets/projects/ERPNext/erp11.jpg'
+import erp12 from '../assets/projects/ERPNext/erp12.png'
+import erp13 from '../assets/projects/ERPNext/erp13.png'
 
 // HUCMS
 import hucmsHome from '../assets/projects/hucms_home.png'
@@ -72,7 +76,7 @@ const PROJECTS = [
       'A cross-platform mobile application for real-time employee check-ins, offline attendance logging, and leave management integrated directly with custom ERPNext REST API endpoints.',
     stack: ['React Native', 'Expo', 'Zustand', 'NativeWind', 'Frappe REST API'],
     links: { code: '#', demo: '#' },
-    images: [erp6, erp7, erp8, erp9],
+    images: [erp6, erp7, erp8, erp9, erp10, erp11, erp12, erp13],
   },
   {
     name: 'HUCMS — Clinic Management System',
