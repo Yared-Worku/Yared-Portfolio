@@ -4,33 +4,50 @@ import { useReveal } from '../hooks/useReveal'
 const LAYERS = [
   {
     label: 'Client',
-    tag: 'frontend',
-    items: ['React', 'Angular', 'HTML/CSS', 'JavaScript'],
+    tag: 'frontend & mobile ui',
+    items: ['React', 'React Native', 'NativeWind', 'Angular', 'HTML/CSS', 'JavaScript'],
   },
   {
     label: 'Application',
     tag: 'backend & api',
-    items: ['ASP.NET Core', 'ADO.NET Core', 'Node.js (Express)', 'C#', 'PHP'],
+    items: ['ASP.NET Core', 'ADO.NET Core', 'Node.js (Express)', 'Python', 'Frappe REST API', 'C#', 'PHP'],
   },
   {
     label: 'Platform',
     tag: 'cms & mobile',
-    items: ['DotNetNuke (DNN) CMS', 'Docker', 'Android'],
+    items: ['DotNetNuke (DNN) CMS', 'Frappe / ERPNext', 'Expo', 'Docker', 'Android'],
   },
   {
     label: 'Data',
     tag: 'persistence',
-    items: ['SQL Server', 'PostgreSQL', 'MySQL', 'SQLite'],
+    items: ['SQL Server', 'PostgreSQL', 'MariaDB', 'MySQL', 'SQLite'],
   },
   {
     label: 'Hardware & Integration',
-    tag: 'biometric & tooling',
-    items: ['ZK iFace Biometric Integration', 'Background Services', 'Git', 'Render'],
+    tag: 'biometric, gps & state',
+    items: [
+      'ZK iFace Biometric Integration',
+      'Native Mobile Biometrics',
+      'GPS Geofencing',
+      'SecureStore',
+      'Zustand',
+      'Offline-First Queue Sync',
+      'Background Services',
+      'Git',
+      'Render',
+    ],
   },
   {
     label: 'Practice',
-    tag: 'soft skills',
-    items: ['Modular System Design', 'Technical Documentation', 'Hardware-Software Interfacing'],
+    tag: 'architecture & design',
+    items: [
+      'Feature-First Architecture',
+      'Modular System Design',
+      'i18n / Localization',
+      'Dark / Light Theme System',
+      'Technical Documentation',
+      'Hardware-Software Interfacing',
+    ],
   },
 ]
 

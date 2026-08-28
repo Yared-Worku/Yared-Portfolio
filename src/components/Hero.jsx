@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
-// import myPhoto from '../assets/yared.jpg'
 import myPhoto from '../assets/yared.JPG'
-const ROLE = 'Full-Stack Software Developer'
+
+const ROLE = 'Full-Stack & Mobile Software Developer'
 
 function TypewriterEffect() {
   const [typed, setTyped] = useState('')
@@ -49,13 +49,9 @@ export default function Hero() {
           <p className="font-mono text-lg md:text-xl text-copper mt-4 min-h-[1.75rem]">
             <TypewriterEffect />
           </p>
-    <p className="mt-6 max-w-xl text-text-muted leading-relaxed">
-  BSc Degree in Information Technology from Hawassa University. I design and ship full systems end to end — from database
-  schema to deployment — with a focus on DotNetNuke (DNN) CMS, full-stack
-  .NET, and JSON-driven architectures. Recent work spans a hospital clinic
-  platform, a biometric attendance system, and a .NET Core containerized bookstore
-  app deployed on Render.
-   </p>
+          <p className="mt-6 max-w-xl text-text-muted leading-relaxed">
+            BSc Degree in Information Technology from Hawassa University. I design and ship full-stack web and mobile systems end to end — from database schema to deployment. My stack spans DotNetNuke (DNN) CMS, full-stack .NET, Node.js, Frappe / ERPNext backends, and React Native (Expo) mobile apps with native biometrics, GPS geofencing, and offline queue syncing. Recent work includes a hospital clinic platform, custom ERPNext modules, and containerized bookstore applications.
+          </p>
           <div className="mt-9 flex flex-wrap items-center gap-4">
             <a
               href="#projects"

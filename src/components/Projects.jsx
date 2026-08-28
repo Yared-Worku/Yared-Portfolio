@@ -117,15 +117,6 @@ const PROJECTS = [
     images: [bpmTopic, bpmForm, bpmOrganization, bpmDepartment],
   },
   {
-    name: 'HU Building Maintenance Project',
-    role: 'Full-Stack Developer',
-    description:
-      'A tracking and reporting tool for university infrastructure management, built in PHP, paired with a native Android app extending the same system to mobile users for on-the-go tracking and reporting.',
-    stack: ['PHP', 'Android'],
-    links: { code: '#', demo: '#' },
-    images: [],
-  },
-  {
     name: 'E-Commerce Product Showcase',
     role: 'Full-Stack Developer',
     description:
@@ -142,6 +133,15 @@ const PROJECTS = [
     stack: ['React', 'ASP.NET Core Web API', 'JSON'],
     links: { code: '#', demo: 'https://online-examination-bxjv.vercel.app' },
     images: [start, s1e, s2e, s3e, summary, completed],
+  },
+  {
+    name: 'HU Building Maintenance Project',
+    role: 'Full-Stack Developer',
+    description:
+      'A tracking and reporting tool for university infrastructure management, built in PHP, paired with a native Android app extending the same system to mobile users for on-the-go tracking and reporting.',
+    stack: ['PHP', 'Android'],
+    links: { code: '#', demo: '#' },
+    images: [],
   },
 ]
 
