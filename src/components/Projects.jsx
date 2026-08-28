@@ -66,16 +66,26 @@ const PROJECTS = [
     description:
       'Worked across the full Frappe/ERPNext stack — from framework internals to production data — to design and ship custom business modules on top of ERPNext and HRMS. Built new DocTypes from scratch (fields, permissions, naming series and list/report views) and extended existing ones to fit organization-specific workflows. Developed and published custom Web Forms and Web Pages for non-technical end users and worked directly within ERPNext\'s native Workspace and module structure to integrate new features without breaking existing flows. On the backend, wrote whitelisted Python REST APIs (.py) for custom business logic, client-side scripts (.js) for real-time form behavior and validation, and JSON schema definitions for DocType and workspace configuration. Also worked hands-on with the underlying MariaDB database — running direct queries to verify data integrity, debug sync issues and understand how Frappe\'s ORM maps to actual table structure — giving a full-stack grasp of the framework from UI down to raw storage. These same REST APIs went on to power an independent mobile app for employee attendance and leave requests, closing the loop from backend design to a real-world client integration.',
     stack: ['Frappe Framework', 'ERPNext', 'HRMS', 'Python', 'JavaScript', 'DocTypes', 'Web Forms', 'JSON', 'MariaDB'],
-    links: { code: '#', demo: '#' },
+    links: { code: 'https://github.com/Yared-Worku/ERPNext_Cusomization.git', demo: '#' },
     images: [erp5, erp4, erp1, erp2, erp3],
   },
-  {
+{
     name: 'ERPNext Mobile Attendance App',
     role: 'Mobile App Engineer',
     description:
-      'A cross-platform mobile application for real-time employee check-ins, offline attendance logging, and leave management integrated directly with custom ERPNext REST API endpoints.',
-    stack: ['React Native', 'Expo', 'Zustand', 'NativeWind', 'Frappe REST API'],
-    links: { code: '#', demo: '#' },
+      'An enterprise-grade, cross-platform mobile app built to replace costly physical biometric devices by allowing employees to check in directly from their phones. Features strict GPS geofencing that calculates employee latitude, longitude and office proximity before allowing check-ins. Built on an offline-first architecture using Zustand, it locally queues offline check-ins and auto-syncs with custom Frappe REST APIs once backend connectivity is restored. Developed with an international feature-first project structure, the app incorporates native biometric authentication, SecureStore session management, localization (i18n), dark/light mode preferences, structured screen navigation, real-time attendance history logging and leave request tracking.',
+    stack: [
+      'React Native',
+      'Expo',
+      'Zustand',
+      'Node.js',
+      'NativeWind',
+      'Local Biometrics',
+      'SecureStore',
+      'Geofencing / GPS',
+      'Frappe REST API',
+    ],
+    links: { code: 'https://github.com/Yared-Worku/ERPNext-Attendance-App.git', demo: '#' },
     images: [erp6, erp7, erp8, erp9, erp10, erp11, erp12, erp13],
   },
   {
@@ -84,7 +94,7 @@ const PROJECTS = [
     description:
       'An end-to-end medical platform for a university health center. DNN CMS orchestrates multi-tenant access and complex user roles, while a React + C# ASP.NET / SQL Server backend automates patient registration, diagnostics, lab testing, hospital referrals, prescription dispensing, and medical certificate generation.',
     stack: ['React', 'C# ASP.NET', 'SQL Server', 'DNN CMS', 'IIS'],
-    links: { code: '#', demo: '#' },
+    links: { code: 'https://github.com/Yared-Worku/HUCMS.git', demo: '#' },
     images: [hucmsHome, hucmsDashboard, hucmsMyApplication, hucmsMyTask, hucmsMedicalCertificate, hucmsPaymentMethod],
   },
   {
@@ -94,7 +104,7 @@ const PROJECTS = [
     description:
       'A containerized online bookstore with role-based access control — users manage only their own listings with read-only access to others, while admins have global edit/delete and user management privileges. Built on ASP.NET Core (C#), developed against SQL Server, migrated to PostgreSQL in production, and deployed on Render via Docker.',
     stack: ['ASP.NET Core', 'Docker', 'PostgreSQL', 'SQL Server'],
-    links: { code: '#', demo: 'https://bulkybookweb.onrender.com' },
+    links: { code: 'https://github.com/Yared-Worku/Bulkybook.git', demo: 'https://bulkybookweb.onrender.com' },
     images: [bsLogin, bsUser, bsRole, bsAdmin],
   },
   {
