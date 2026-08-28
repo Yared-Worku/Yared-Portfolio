@@ -3,6 +3,19 @@ import SectionHeading from './SectionHeading'
 import { useReveal } from '../hooks/useReveal'
 import { createPortal } from 'react-dom'
 
+// ERPNext Backend & Customization
+import erp1 from '../assets/projects/ERPNext/erp1.png'
+import erp2 from '../assets/projects/ERPNext/erp2.png'
+import erp3 from '../assets/projects/ERPNext/erp3.png'
+import erp4 from '../assets/projects/ERPNext/erp4.png'
+import erp5 from '../assets/projects/ERPNext/erp5.png'
+
+// ERPNext Mobile App
+import erp6 from '../assets/projects/ERPNext/erp6.jpg'
+import erp7 from '../assets/projects/ERPNext/erp7.jpg'
+import erp8 from '../assets/projects/ERPNext/erp8.jpg'
+import erp9 from '../assets/projects/ERPNext/erp9.jpg'
+
 // HUCMS
 import hucmsHome from '../assets/projects/hucms_home.png'
 import hucmsDashboard from '../assets/projects/hucms_dashboard.png'
@@ -23,7 +36,7 @@ import bpmForm from '../assets/projects/bpm_form.png'
 import bpmOrganization from '../assets/projects/bpm_organization.png'
 import bpmDepartment from '../assets/projects/bpm_department.png'
 
-//online shope
+// online shop
 import custdetail from '../assets/projects/shoping/custdetail.png'
 import last from '../assets/projects/shoping/last.png'
 import payment from '../assets/projects/shoping/payment.png'
@@ -33,16 +46,34 @@ import s3 from '../assets/projects/shoping/s3.png'
 import s4 from '../assets/projects/shoping/s4.png'
 import shipdetail from '../assets/projects/shoping/shipdetail.png'
 
- //online exam
- import start from '../assets/projects/exam/start.png'
- import completed from '../assets/projects/exam/completed.png'
- import s1e from '../assets/projects/exam/s1e.png'
- import s2e from '../assets/projects/exam/s2e.png'
- import s3e from '../assets/projects/exam/s3e.png'
- import summary from '../assets/projects/exam/summary.png'
+// online exam
+import start from '../assets/projects/exam/start.png'
+import completed from '../assets/projects/exam/completed.png'
+import s1e from '../assets/projects/exam/s1e.png'
+import s2e from '../assets/projects/exam/s2e.png'
+import s3e from '../assets/projects/exam/s3e.png'
+import summary from '../assets/projects/exam/summary.png'
 
 
 const PROJECTS = [
+  {
+    name: 'ERPNext Customization & Module Development',
+    role: 'Frappe / ERPNext Backend Developer',
+    description:
+      'Engineered custom business logic and extended ERPNext core functionality using the Frappe framework. Built custom DocTypes, Web Forms, and Workspaces alongside whitelisted Python REST APIs (.py), client scripts (.js), and database schema definitions (.json) to automate workflows.',
+    stack: ['Frappe Framework', 'Python', 'JavaScript', 'ERPNext', 'JSON', 'MariaDB'],
+    links: { code: '#', demo: '#' },
+    images: [erp1, erp2, erp3, erp4, erp5],
+  },
+  {
+    name: 'ERPNext Mobile Attendance App',
+    role: 'Mobile App Engineer',
+    description:
+      'A cross-platform mobile application for real-time employee check-ins, offline attendance logging, and leave management integrated directly with custom ERPNext REST API endpoints.',
+    stack: ['React Native', 'Expo', 'Zustand', 'NativeWind', 'Frappe REST API'],
+    links: { code: '#', demo: '#' },
+    images: [erp6, erp7, erp8, erp9],
+  },
   {
     name: 'HUCMS — Clinic Management System',
     role: 'Lead Developer',
@@ -80,7 +111,6 @@ const PROJECTS = [
     links: { code: '#', demo: '#' },
     images: [],
   },
-  
   {
     name: 'E-Commerce Product Showcase',
     role: 'Full-Stack Developer',
@@ -132,7 +162,6 @@ function ProjectSlider({ images, name }) {
     setIndex((i) => (i + 1) % images.length)
   }
 
-  // Close on Escape while zoomed
   useEffect(() => {
     if (!zoomed) return
     const onKey = (e) => {
@@ -156,7 +185,7 @@ function ProjectSlider({ images, name }) {
     )
   }
 
-return (
+  return (
     <>
       <div
         className="relative w-full aspect-[4/3] rounded-sm overflow-hidden border border-[color:var(--color-border)] bg-ink group/slider cursor-zoom-in"
@@ -210,7 +239,6 @@ return (
           </>
         )}
 
-        {/* subtle zoom affordance */}
         <div className="absolute top-2 right-2 w-6 h-6 rounded-full bg-ink/80 border border-[color:var(--color-border)] text-text-muted opacity-0 group-hover/slider:opacity-100 transition-opacity flex items-center justify-center font-mono text-[10px]">
           ⤢
         </div>
