@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from 'react'
 
-export function useReveal(threshold = 0.15) {
+export function useReveal(threshold = 0) {
   const ref = useRef(null)
   const [visible, setVisible] = useState(false)
 
@@ -14,7 +14,7 @@ export function useReveal(threshold = 0.15) {
           observer.unobserve(el)
         }
       },
-      { threshold }
+      { threshold, rootMargin: '0px 0px -10% 0px' }
     )
     observer.observe(el)
     return () => observer.disconnect()
